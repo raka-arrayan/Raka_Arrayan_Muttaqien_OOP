@@ -13,7 +13,7 @@ public class Main
        
        mataPelajaran IPA =new mataPelajaran("IPA",guruIPA);
        
-       IPA.addNilai(IPA.UTS,20,IPA.UAS,10);
+       IPA.addNilai(Penilaian.UTS,30,Penilaian.UAS,70);
        
        Siswa Raka = new Siswa ("Raka" ,33,IPA);
        

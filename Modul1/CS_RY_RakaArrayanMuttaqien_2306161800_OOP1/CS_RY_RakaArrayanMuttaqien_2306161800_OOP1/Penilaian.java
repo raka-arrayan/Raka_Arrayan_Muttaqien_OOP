@@ -8,6 +8,6 @@
 public enum Penilaian
 {
     UTS,
-    UAS;
+    UAS
     
 }
