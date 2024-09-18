@@ -10,8 +10,7 @@ package CS_EF_RakaArrayanMuttaqien_2306161800_OOP2;
 public class Intern extends Employee implements CalculateSalary
 {
     private double hourlyRate;
-    private double hoursWorked;
-    
+    private int  hoursWorked;
     
     public Intern(String name, int id, Position position, Division division, double 
     hourlyRate, int hoursWorked) {
@@ -20,21 +19,23 @@ public class Intern extends Employee implements CalculateSalary
     this.hoursWorked=hoursWorked;
     }
     
-    public double totalSalary(){
-        int  monthlyWorked =  hoursWorked * 20;
-        
-        if ( hoursWorked < 20 ){
-            return 0;
+    public double totalSalary() {
+        int monthlyWorked = hoursWorked * 20;
+
+        if (monthlyWorked < 20) {
+            return 0; 
         }
-        
-        int salary =monthlyWorked * hoursWorked;
-        if (hoursWorked < 80 ) {
-            return salary;     
+
+        double salary = hourlyRate * hoursWorked;
+        if (monthlyWorked < 80) {
+            return salary;
+        } else {
+            double bonus = salary * 0.125; 
+            return salary + bonus;
         }
-        
     }
     
-    public displayInfo(){
+    public void  displayInfo(){
         System.out.println("Nama" + getName());
         System.out.println("ID" + getId());
         System.out.println("Posisi" + position);
@@ -42,5 +43,6 @@ public class Intern extends Employee implements CalculateSalary
         System.out.println("hourlyRate"+ hourlyRate);
         System.out.println("hoursWorked" + hoursWorked);
         System.out.println("totalSalary"+ totalSalary());
+        System.out.println();
     }
 }
