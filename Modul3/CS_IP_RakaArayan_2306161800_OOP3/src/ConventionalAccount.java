@@ -11,6 +11,7 @@ public class ConventionalAccount extends  Account {
     public double getCredit() {
         return credit;
     }
+    pub
 
     public void setCredit(double credit) {
         this.credit = credit;

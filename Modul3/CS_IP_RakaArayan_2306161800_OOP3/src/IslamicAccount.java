@@ -14,7 +14,7 @@ public class IslamicAccount extends Account{
 //
 //    }
 
-    public  void howDetail(){
+    public  void showDetail(){
         System.out.println("");
         System.out.println("");
         System.out.println("");
