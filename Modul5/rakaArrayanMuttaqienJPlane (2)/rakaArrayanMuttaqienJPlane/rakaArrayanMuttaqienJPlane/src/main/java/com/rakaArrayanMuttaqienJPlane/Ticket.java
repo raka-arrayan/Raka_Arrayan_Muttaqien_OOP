@@ -21,7 +21,7 @@ public class Ticket {
     private Plane plane;
 
 
-    @code(name="netlab",nullable=true)
+    @Column(name="netlab",nullable=true)
     private String code;
 
 
