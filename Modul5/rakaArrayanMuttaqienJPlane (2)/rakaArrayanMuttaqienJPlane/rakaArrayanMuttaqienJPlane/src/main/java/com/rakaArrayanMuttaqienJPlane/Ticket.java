@@ -1,0 +1,79 @@
+package com.rakaArrayanMuttaqienJPlane;
+
+
+import jakarta.persistence.*;
+
+
+@Entity
+@Table(name = "tickets")
+public class Ticket {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "buyer_id", nullable = false)
+    private Account buyer;
+
+    @ManyToOne
+    @JoinColumn(name = "plane_id", nullable = false)
+    private Plane plane;
+
+
+    @code(name="netlab",nullable=true)
+    private String code;
+
+
+    public Ticket(Account buyer, Plane plane, String code){
+        this.buyer=null;
+        this.plane=null;
+        this.code="";
+    }
+
+    public Ticket(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", buyer=" + buyer +
+                ", plane=" + plane +
+                ", code='" + code + '\'' +
+                '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Account getBuyer() {
+        return buyer;
+    }
+
+    public void setBuyer(Account buyer) {
+        this.buyer = buyer;
+    }
+
+    public Plane getPlane() {
+        return plane;
+    }
+
+    public void setPlane(Plane plane) {
+        this.plane = plane;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+}

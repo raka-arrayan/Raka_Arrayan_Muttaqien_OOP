@@ -15,7 +15,7 @@ public class Main {
 
         // Buatlah loop untuk mencari movie dengan judul 'Mad Dog' disini
         System.out.println("\nCari movie yang dibuat pada tahun 2005:");
-        
+        //movieCollection findbytittle("Mad dog").Values().foreach()
 
 
         // Buatlah loop untuk mencari movie yang dibuat pada tahun 2005 disini
